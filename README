@@ -1,0 +1,36 @@
+# Daily Summary Podcast
+
+This script fetches daily news headlines, generates summaries for the events, and converts the summaries into speech, creating an audio podcast. It uses the OpenAI API for text generation and ElevenLabs API for text-to-speech conversion.
+
+## Dependencies
+
+- Python 3
+- BeautifulSoup4
+- requests
+- pydub
+- openai
+
+Install the required dependencies using pip:
+
+```bash
+pip install beautifulsoup4 requests pydub openai
+
+
+## Usage
+
+1. Replace `your_api_key_here` with your OpenAI API key in the following line:
+
+        openai.api_key = 'your_api_key_here'
+     
+2. Replace your_api_key_here with your ElevenLabs API key in the following section:
+
+        headers = {
+            "Accept": "audio/mpeg",
+            "Content-Type": "application/json",
+            "xi-api-key": "your_api_key_here",
+        }
+
+        Run the script!
+        python daily_summary_podcast.py
+
+        The script will generate an MP3 file called DailySummary.mp3, containing the audio summary of the daily news events, presented in a professional manner.
